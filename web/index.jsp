@@ -8,12 +8,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
         <%@include file="include/header.jsp" %>
-
+        <%@include file="include/account.jsp" %>
             <!-- Content -->
             <div id="content">
                 <div class="content-section background-product" style="width: 1500px">
@@ -135,5 +139,6 @@
                     </div>
 
                 </div>
+        <%@include file="include/footer.jsp" %>       
     </body>
 </html>
