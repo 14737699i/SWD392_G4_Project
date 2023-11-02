@@ -23,30 +23,7 @@
                     <li class="nav-item me-4">
                         <a class="nav-link active" aria-current="page" href="home">Trang chủ</a>
                     </li>
-                    <li class="nav-item dropdown nav-item me-4">
-                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Nam  </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="list?${historyKey}${historyValue}${historyType}&gender=Nam" ${categoryId == 0 ? "Selected" : ""}> Tất cả</a></li>
-                                <c:forEach items="${sessionScope.listCategoriesMale}" var="c">
-                                <li><a class="dropdown-item" href="list?${historyKey}&categoryId=${c.id}${historyValue}${historyType}&gender=${c.gender}" ${categoryId == c.id ? "Selected" : ""}> ${c.name}</a></li>
-                                </c:forEach>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown nav-item me-4">
-                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Nữ  </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="list?${historyKey}${historyValue}${historyType}&gender=Nữ" ${categoryId == 0 ? "Selected" : ""}> Tất cả</a></li>
-                                <c:forEach items="${sessionScope.listCategoriesFemale}" var="c">
-                                <li><a class="dropdown-item" href="list?${historyKey}&categoryId=${c.id}${historyValue}${historyType}&gender=${c.gender}" ${categoryId == c.id ? "Selected" : ""}> ${c.name}</a></li>
-                                </c:forEach>
-                        </ul>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link" href="blog">Blog</a>
-                    </li>
-                   <!-- <li class="nav-item me-4">
-                        <a class="nav-link" href="../contact.jsp">Liên hệ</a>
-                    </li>-->
+                    
 
 
                 </ul>

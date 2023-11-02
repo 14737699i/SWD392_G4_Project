@@ -18,8 +18,8 @@ import model.Order;
 public class OrderDAO extends DBContext {
     public List<Order> getAllOrder(int userId) {
         List<Order> list = new ArrayList<>();
-        String sql = "select * from [Order] join Status_Order\n"
-                + "on [Order].status_order= Status_Order.status_order_id\n"
+        String sql = "select * from [Order] \n"
+            
                 + "where userId = ?";
         try {
             PreparedStatement st = connection.prepareStatement(sql);
@@ -36,7 +36,6 @@ public class OrderDAO extends DBContext {
                         .mobile(rs.getString(5))
                         .address(rs.getString(6))
                         .status_order(rs.getInt(7))
-                        .status_order_name(rs.getString(12))
                         .build();
 
                 list.add(c);

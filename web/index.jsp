@@ -85,61 +85,15 @@
                     </div>
                 </div>
 
-
-                <div class="content-Category-section background-product"><!--
-
-                    <!-- Product list -->
-                    <h2 class="section-heading">Những sản phẩm đa dạng</h2>
-                    <div class="category-list">
-                        <a href="list?&categoryId=3&gender="><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg1.jpg')
-                                                          top center / cover no-repeat">
-                                <div class="category-content">Đồ mặc trong</div>
-                            </div></a>
-
-                        <a href="list?&categoryId=1&gender="><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg2.jpg')
-                                                          top center / cover no-repeat">
-                                <div class="category-content">Đồ mặc ngoài</div>
-                            </div></a>
-
-                        <a href="list?&categoryId=4&gender="><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg3.jpg')
-                                                          top center / cover no-repeat">
-                                <div class="category-content">Phụ kiện</div>
-                            </div></a>
-
-
-                        <a href="list?&categoryId=2&gender="><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg4.jpg')
-                                                          top center / cover no-repeat">
-                                <div class="category-content">Quần</div>
-                            </div></a>
-
-                        <div class="clear"></div>
-                    </div> 
-                </div>
                 <!-- Blog -->
                 <div class="blog-section">
                     <div class="content-section">
-                        <h2 class="section-heading text-white">Chúng tôi luôn mang đến những công nghệ hiện đại nhất</h2>
-                        <p class="section-sub-heading text-white">Công nghệ Việt cho người Việt</p>
-
-                        <!-- blog list hot -->
-                        <div class="blog-list">
-
-                            <c:forEach items="${sessionScope.listBlog_HomePage}" var="c">
-                                <div class="blog-item">
-                                    <img src="${c.thumbnail}" alt="" class="blog-img" style="width: 592px; height: 450px">
-                                    <div class="blog-body" style="min-height: 340px">
-                                        <h3 class="blog-heading" style="font-size: 40px">${c.title}</h3>
-                                        <p class="blog-desc">${c.brief_infor}</p>
-                                        <a href="blogDetail?blog_id=${c.blog_id}&categoryBlog_id=${c.categoryBlog_id}" class="place-buy-btn">Tìm hiểu thêm</a>
-                                    </div>
-                                </div>
-                            </c:forEach>
-
-                            <div class="clear"></div>
-                        </div> 
+                        <h2 class="section-heading text-white">Chúng tôi lắng nghe bạn!</h2>
+                        <p class="section-sub-heading text-white">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+ 
                     </div>
 
                 </div>
-        <%@include file="include/footer.jsp" %>       
+                
     </body>
 </html>

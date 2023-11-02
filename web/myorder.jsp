@@ -44,7 +44,7 @@
                         <th>Sản&nbspphẩm</th>
                         <th>Tổng&nbspchi&nbspphí</th>
                         <th>Tình&nbsptrạng</th>
-                        <th></th>
+                            
                     </tr>
                 </thead>
                 <tbody>
@@ -60,14 +60,12 @@
                                 <td>${c.fullNameFirstProduct}</td>
                             </c:if>
                             <td>${c.total_cost}</td>
-                            <td>${c.status_order_name}</td>
-                            <td>
-                                <c:if test="${c.status_order_name eq 'Đang gửi'}">
-                                    <div class="row">
-                                        <a href="cancel-order?order_id=${c.orderID}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true" >Hủy</a>
-                                    </div>
-
-                                </c:if></td>
+                            <c:if test="${c.status_order == 1}">
+                                <td>Ðang g?i</td>
+                            </c:if>
+                            <c:if test="${c.status_order == 2}">
+                                <td>Thành công</td>
+                            </c:if>
                         </tr>
 
                     </c:forEach>
@@ -79,35 +77,5 @@
         <%--<%@include file="include/footer.jsp" %>--%>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         
-<!--        <script>
-            $(document).ready(function () {
-                $('#sortTable').DataTable({
-                    "language": {
-                        "decimal": "",
-                        "emptyTable": "No data available in table",
-                        "info": " _START_ đến _END_ của _TOTAL_ bản ghi",
-                        "infoEmpty": "HIển thị 0 to 0 of 0 bản ghi",
-                        "infoFiltered": "(kết quả từ _MAX_ tổng số bản ghi)",
-                        "infoPostFix": "",
-                        "thousands": ",",
-                        "lengthMenu": "Hiển thị _MENU_ bản ghi",
-                        "loadingRecords": "Loading...",
-                        "processing": "",
-                        "search": "Tìm kiếm:",
-                        "zeroRecords": "Không tìm thấy kết quả nào",
-                        "paginate": {
-                            "first": "F",
-                            "last": "L",
-                            "next": "Sau",
-                            "previous": "Trước"
-                        },
-                        "aria": {
-                            "sortAscending": ": activate to sort column ascending",
-                            "sortDescending": ": activate to sort column descending"
-                        }
-                    }
-                });
-            });
-        </script>-->
     </body>
 </html>
